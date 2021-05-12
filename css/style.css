@@ -17,7 +17,8 @@
 
 .web main {
     height: calc(100vh - 90px);
-    background-color: chartreuse;
+    border: black;
+    /* background-color: chartreuse; */
 }
 
 main .sidebar {
@@ -25,7 +26,7 @@ main .sidebar {
 }
 
 main .content {
-    background-color: darkseagreen;
+    /* background-color: darkseagreen; */
     height: 100%;
     overflow-y: scroll;
     display: flex;
@@ -33,29 +34,60 @@ main .content {
 }
 
 .topnav {
-    border: 2px black solid;
     position: fixed;
-    background-color: gray;
-    height: 100px;
+    background-color:black;
+    filter: invert(0.2);
+    height: 70px;
     width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
+
+.button-topnav{
+    height: 35px;
+    width:200px;
+    border-radius: 35px;
+    border: 2px white solid;
+    color:white;
+    background-color: black;
+    font-size: 13px;
+    font-weight: bolder;
+    margin-right: 20px;
+}
+ nav {
+     display: flex;
+     justify-content: center;
+ }
+
+ nav li a{
+    text-decoration: none;
+    color:gray;
+    font-size: 12px;
+    font-weight: bolder;
+ }
+
+ a:hover{
+     border-bottom:2px greenyellow solid;
+     
+ }
 
 .podcasts {
     background: #000;
-    margin-top: 100px;
+    margin-top: 70px;
     height: 100%;
 
 }
 
 .web footer {
-    background-color:#312c2c;
+    background-color:#222020;
     height:90px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-ul {
+ ul {
     display: flex;
     flex-direction: row;
 }
@@ -73,7 +105,7 @@ li {
 .list-column{
     display: flex;
     flex-direction: column;
-    margin-left:15px ;
+    margin-left:10px ;
     margin-top: 5px;
     /* align-items: center;
     justify-content: center; */
