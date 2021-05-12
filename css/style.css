@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container-fluid {
+   width:100%;
+   background-color: blueviolet;
+}
+
+.web{
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+}
+
+.web main{
+    flex-grow: 1;
+    background-color: chartreuse;
+}
+
+.web footer{
+    background-color: darkgoldenrod;
+    flex-basis:90px;
+}
