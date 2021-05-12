@@ -5,21 +5,50 @@
 }
 .container-fluid {
    width:100%;
-   background-color: blueviolet;
+   /* background-color: blueviolet; */
 }
 
 .web{
-   height: 100vh;
-   display: flex;
-   flex-direction: column;
+   max-height: 100vh;
+   /* display: flex;
+   flex-direction: column; */
 }
 
-.web main{
-    flex-grow: 1;
+.web main {
+    height: calc(100vh - 90px);
     background-color: chartreuse;
 }
 
-.web footer{
-    background-color: darkgoldenrod;
-    flex-basis:90px;
+main .sidebar {
+    background-color: darkmagenta;
 }
+
+main .content {
+    background-color: darkseagreen;
+    height: 100%;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+}
+
+.topnav {
+    border: 2px black solid;
+    position: fixed;
+    background-color: gray;
+    height: 100px;
+    width: 100%;
+}
+
+.podcasts {
+    background: #000;
+    margin-top: 100px;
+    height: 100%;
+
+}
+
+.web footer {
+    background-color: darkgoldenrod;
+    height:90px;
+}
+
+
