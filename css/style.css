@@ -22,7 +22,7 @@
 }
 
 main .sidebar {
-    background-color: darkmagenta;
+    background-color:black;
 }
 
 main .content {
@@ -36,7 +36,6 @@ main .content {
 .topnav {
     position: fixed;
     background-color:black;
-    filter: invert(0.2);
     height: 70px;
     width: 100%;
     display: flex;
@@ -67,16 +66,33 @@ main .content {
     font-weight: bolder;
  }
 
- a:hover{
+ nav li a:hover{
      border-bottom:2px greenyellow solid;
      
+ }
+
+ .navbar-column ul{
+     display: flex;
+     flex-direction: column;
+ }
+
+ .navbar-column li{
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     /* color: grey;  */
+ }
+
+ .navbar-column ul li a{
+     text-decoration: none;
+     color:grey;
  }
 
 .podcasts {
     background: #000;
     margin-top: 70px;
     height: 100%;
-
+    filter: invert(0.2);
 }
 
 .web footer {
@@ -107,8 +123,6 @@ li {
     flex-direction: column;
     margin-left:10px ;
     margin-top: 5px;
-    /* align-items: center;
-    justify-content: center; */
 }
 
 li .list-row{
@@ -119,8 +133,8 @@ li .list-row{
     align-items: center; 
 }
 
-li .list-row i{
-    margin-left: 15px;
+li .list-row {
+    padding-right: 20px;
 }
 
 i{
