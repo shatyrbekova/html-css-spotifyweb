@@ -53,6 +53,11 @@ main .content {
     margin-right: 20px;
 }
 
+.button-topnav:hover {
+    opacity: 0.6;
+    border:2px greenyellow solid; 
+    color:greenyellow;
+}
  nav {
      display: flex;
      justify-content: center;
@@ -91,7 +96,6 @@ main .content {
  .icon-user{
      font-size: 30px;
      color:white;
-     margin-right: 10px;
  }
 
 .navbar-column ul li  a:hover {
@@ -109,7 +113,39 @@ main .content {
 .navbar-column h4{
     color: white;
 }
+.navbar-column i {
+ margin-right: 15px;
+}
 
+footer .controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .controls > div{
+    margin-left: 15px;
+}
+.duration-audio{
+    display: flex;
+    flex-direction: row;
+}
+footer .controls .duration-audio .eighty-percent-audio{
+    width:300px;
+    height:4px;
+    border-radius: 4px;
+    background-color: gray;
+    cursor: pointer;
+}
+
+footer .controls .duration-audio .twenty-percent-audio {
+    width:100px;
+    height:4px;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+}
 .icon-install-user {
     position: relative;
     top:190px;
@@ -127,9 +163,7 @@ main .content {
     align-items: center;
 }
 
-.icons-audio hr {
-    
-}
+
 .podcasts {
     background: #000;
     margin-top: 70px;
@@ -142,7 +176,7 @@ main .content {
     height:90px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-between; 
 }
 
  ul {
@@ -178,8 +212,8 @@ li .list-row {
     padding-right: 20px;
 }
 
-i{
-    margin-left: 15px;
+footer i{
+    margin-left: 30px;
 }
 
 .play{
