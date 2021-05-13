@@ -6,27 +6,24 @@
 }
 .container-fluid {
    width:100%;
-   /* background-color: blueviolet; */
 }
 
 .web{
    max-height: 100vh;
-   /* display: flex;
-   flex-direction: column; */
 }
 
 .web main {
     height: calc(100vh - 90px);
     border: black;
-    /* background-color: chartreuse; */
 }
 
 main .sidebar {
     background-color:black;
+    /* height:calc(100vh - 90px); */
+    overflow-y: hidden;
 }
 
 main .content {
-    /* background-color: darkseagreen; */
     height: 100%;
     overflow-y: scroll;
     display: flex;
@@ -35,7 +32,8 @@ main .content {
 
 .topnav {
     position: fixed;
-    background-color:black;
+    background-color: black;
+    /* background-color: rgba (22, 26, 46, 0.4); */
     height: 70px;
     width: 100%;
     display: flex;
@@ -54,6 +52,7 @@ main .content {
     font-weight: bolder;
     margin-right: 20px;
 }
+
  nav {
      display: flex;
      justify-content: center;
@@ -67,27 +66,70 @@ main .content {
  }
 
  nav li a:hover{
-     border-bottom:2px greenyellow solid;
-     
+     border-bottom:2px greenyellow solid; 
  }
 
+ 
  .navbar-column ul{
      display: flex;
      flex-direction: column;
+ 
  }
 
  .navbar-column li{
      display: flex;
      flex-direction: row;
      align-items: center;
-     /* color: grey;  */
+     padding-bottom:5px;
  }
 
- .navbar-column ul li a{
+ .navbar-column ul li a, .navbar-column li{
      text-decoration: none;
      color:grey;
  }
 
+ .icon-user{
+     font-size: 30px;
+     color:white;
+     margin-right: 10px;
+ }
+
+.navbar-column ul li  a:hover {
+     color:white;
+}
+
+ .icon-create-playlist i {
+     font-size: 45px;
+ }
+
+ .navbar-column hr{
+     width: 200px;
+ }
+
+.navbar-column h4{
+    color: white;
+}
+
+.icon-install-user {
+    position: relative;
+    top:190px;
+}
+
+.icon-install-user span {
+    color:white;
+    font-weight: bolder;
+}
+
+.icons-audio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons-audio hr {
+    
+}
 .podcasts {
     background: #000;
     margin-top: 70px;
@@ -114,7 +156,6 @@ li {
     display: flex;
     flex-direction: row;
     color:white;
-    /* margin-right: 45px; */
    
 }
 
@@ -139,12 +180,12 @@ li .list-row {
 
 i{
     margin-left: 15px;
-   
 }
 
 .play{
     font-size: 25px;
 }
+
 .text-white{
     font-weight: bold;
     font-size: 15px;
@@ -152,6 +193,5 @@ i{
 
 .text-gray{
     color: gray;
-    /* font-size: 15px; */
 }
 
