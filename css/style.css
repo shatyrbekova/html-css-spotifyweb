@@ -4,6 +4,7 @@
     padding: 0;
     font-family: Helvetica,Arial,sans-serif;
 }
+
 .container-fluid {
    width:100%;
 }
@@ -14,13 +15,13 @@
 
 .web main {
     height: calc(100vh - 90px);
-    border: black;
+    border: rgb(26, 24, 24)
 }
 
 main .sidebar {
     background-color:black;
-    /* height:calc(100vh - 90px); */
-    overflow-y: hidden;
+    height:calc(100vh - 90px);
+    /* overflow-y: hidden; */
 }
 
 main .content {
@@ -56,7 +57,34 @@ main .content {
 .button-topnav:hover {
     opacity: 0.6;
     border:2px greenyellow solid; 
-    color:greenyellow;
+}
+
+.podcasts {
+    background-color: #0c0a0c;
+    margin-top: 70px;
+    height: 100%;
+}
+
+.podcasts .recently-played {
+    color:white;
+    margin:  15px 15px;
+}
+[class*="item-"]{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.first-row {
+    /* display: flex;
+    flex-direction: row; */
+    margin-top: 15px;
+}
+.recently-played img{
+    width:170px;
+    height:170px;
+}
+.subtitle {
+    color: grey;
 }
  nav {
      display: flex;
@@ -96,6 +124,10 @@ main .content {
  .icon-user{
      font-size: 30px;
      color:white;
+ }
+
+ .icon-install-user {
+     padding:0;
  }
 
 .navbar-column ul li  a:hover {
@@ -163,14 +195,6 @@ footer .controls .duration-audio .twenty-percent-audio {
     align-items: center;
 }
 
-
-.podcasts {
-    background: #000;
-    margin-top: 70px;
-    height: 100%;
-    filter: invert(0.2);
-}
-
 .web footer {
     background-color:#222020;
     height:90px;
@@ -192,7 +216,10 @@ li {
     color:white;
    
 }
-
+/* nav ul li, footer ul li, .name-playlist ul li 
+{
+    margin:5px;
+} */
 .list-column{
     display: flex;
     flex-direction: column;
