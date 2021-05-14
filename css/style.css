@@ -18,11 +18,7 @@
     border: rgb(26, 24, 24)
 }
 
-main .sidebar {
-    background-color:black;
-    height:calc(100vh - 90px);
-    /* overflow-y: hidden; */
-}
+
 
 main .content {
     height: 100%;
@@ -33,8 +29,7 @@ main .content {
 
 .topnav {
     position: fixed;
-    background-color: black;
-    /* background-color: rgba (22, 26, 46, 0.4); */
+    background-color:black;
     height: 70px;
     width: 100%;
     display: flex;
@@ -59,36 +54,93 @@ main .content {
     border:2px greenyellow solid; 
 }
 
-.podcasts {
-    background-color: #0c0a0c;
+/* Players */
+
+.podcasts {   
+    background-color:rgb(20, 21, 31);
     margin-top: 70px;
-    height: 100%;
+   
 }
 
 .podcasts .recently-played {
     color:white;
     margin:  15px 15px;
+    display:flex;
+    flex-direction:column;
+    flex-wrap: wrap;
 }
+
 [class*="item-"]{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width:200px;
 }
 .first-row {
-    /* display: flex;
-    flex-direction: row; */
+    margin-top: 15px;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    width
+}
+
+.recently-played img{
+    width:180px;
+    height:180px;
+}
+
+.più-ascolti {
+    margin: 45px 0 30px 15px;
+    /* margin-left: 15px;
+    margin-bottom: 30px; */
+}
+
+.più-ascolti p{
+    color:grey;
     margin-top: 15px;
 }
-.recently-played img{
-    width:170px;
-    height:170px;
+
+.image-play{
+    position: relative;
 }
+
+.image-play i {
+    font-size: 40px;
+    display: none;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%)
+}
+
+.image-play:hover i{
+    cursor: pointer;
+    display: block;
+}
+
+.image-play:hover img{
+    cursor: pointer;
+    opacity: .5;
+}
+
+.image-text {
+text-align: center;
+/* margin-top: 15px; */
+padding: 15px;
+font-size: 17px;
+font-weight: bold;
+}
+
 .subtitle {
+    margin-top: 10px;
     color: grey;
+    font-size: 13px;
 }
+
  nav {
      display: flex;
      justify-content: center;
+     flex-wrap:wrap;
  }
 
  nav li a{
@@ -100,22 +152,39 @@ main .content {
 
  nav li a:hover{
      border-bottom:2px greenyellow solid; 
+     color:white;
  }
 
- 
- .navbar-column ul{
+ /* Sidebar */
+ main .sidebar {
+    background-color:black;
+    height:calc(100vh - 90px);
+    overflow-y:hidden ;
+    /* flex-direction: column; */
+    /* display: flex;
+    flex-direction: column ;
+    justify-content: space-between;
+    /* overflow-y: hidden; */
+    /* overflow-y: hidden; */
+}
+
+ .navbar-column div ul{
      display: flex;
      flex-direction: column;
  
  }
-
+.navbar-column {
+    min-height:400px;
+    display: flex;
+    flex-direction: column;
+}
  .navbar-column li{
      display: flex;
      flex-direction: row;
-     align-items: center;
-     padding-bottom:5px;
+     align-items: center; 
  }
-
+ 
+ 
  .navbar-column ul li a, .navbar-column li{
      text-decoration: none;
      color:grey;
@@ -128,6 +197,7 @@ main .content {
 
  .icon-install-user {
      padding:0;
+     height: 50px;
  }
 
 .navbar-column ul li  a:hover {
@@ -145,48 +215,88 @@ main .content {
 .navbar-column h4{
     color: white;
 }
+
 .navbar-column i {
  margin-right: 15px;
 }
 
-footer .controls {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+.name-playlist{
+    flex-grow: 1;
+    flex-shrink:1;
+    overflow:auto;
 }
 
-footer .controls > div{
-    margin-left: 15px;
-}
-.duration-audio{
-    display: flex;
-    flex-direction: row;
-}
-footer .controls .duration-audio .eighty-percent-audio{
-    width:300px;
-    height:4px;
-    border-radius: 4px;
-    background-color: gray;
-    cursor: pointer;
-}
-
-footer .controls .duration-audio .twenty-percent-audio {
-    width:100px;
-    height:4px;
-    border-radius: 4px;
-    background-color: white;
-    cursor: pointer;
-}
 .icon-install-user {
-    position: relative;
-    top:190px;
+    height:90px;
 }
 
 .icon-install-user span {
     color:white;
     font-weight: bolder;
 }
+          /* Footer */
+
+ .web footer {
+     background-color:#222020;
+     height:90px;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between; 
+ }
+
+footer .controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+footer .icons-playlist .icons-voce {
+    flex-basis: 230px;
+    height:100%;  /* aggiunta 11:56 */
+}
+
+footer .icons {
+    flex-basis: 50%;
+    flex-grow: 1;
+    height:1
+}
+
+footer .controls > div{
+    margin-left: 15px;
+}
+
+.duration-audio{
+    display: flex;
+    flex-direction: row;
+    flex-grow:1;
+    width:300px;
+}
+
+.voice-icon{
+    display: flex;
+    flex-direction: row;
+    width:150px;
+    margin: 5px 0 0 10px;
+}
+
+footer .controls .duration-audio .eighty-percent-audio, .voice-icon .eighty-percent-audio{
+    width:80%;
+    height:4px;
+    border-radius: 4px;
+    background-color: gray;
+    cursor: pointer;
+}
+
+footer .controls .duration-audio .twenty-percent-audio, .voice-icon .twenty-percent-audio{
+    width:20%;
+    height:4px;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+}
+
 
 .icons-audio{
     display: flex;
@@ -195,31 +305,25 @@ footer .controls .duration-audio .twenty-percent-audio {
     align-items: center;
 }
 
-.web footer {
-    background-color:#222020;
-    height:90px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between; 
-}
 
- ul {
+
+ul {
     display: flex;
     flex-direction: row;
+    height:100%;
 }
 
 li {
     list-style: none;
-    padding:15px;
+    /* padding:15px; */
+    margin-left: 15px;
+    margin-top: 12px;
     display: flex;
     flex-direction: row;
     color:white;
    
 }
-/* nav ul li, footer ul li, .name-playlist ul li 
-{
-    margin:5px;
-} */
+
 .list-column{
     display: flex;
     flex-direction: column;
