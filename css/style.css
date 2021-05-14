@@ -61,8 +61,11 @@ main .content {
 .podcasts {   
     background-color:rgb(20, 21, 31);
     margin-top: 70px;
-    height: calc(100vh - 90px);
-   
+    overflow-y: auto;
+    width:100%;
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
 }
 
 .podcasts .recently-played {
@@ -71,6 +74,7 @@ main .content {
     display:flex;
     flex-direction:column;
     flex-wrap: wrap;
+
 }
 
 [class*="item-"]{
@@ -78,14 +82,15 @@ main .content {
     flex-direction: column;
     align-items: center;
     width:200px;
-    flex-wrap: wrap;
+    min-height: 300px;
+    /* flex-wrap: wrap; */
 }
 .first-row {
     margin-top: 15px;
     display: flex;
     flex-direction:row;
     align-items: center;
-    width
+    flex-wrap: wrap;
 }
 
 .recently-played img{
@@ -164,14 +169,12 @@ font-weight: bold;
     background-color:black;
     height:calc(100vh - 90px);
     overflow-y:hidden ;
-    /* flex-direction: column; */
-    /* display: flex;
-    flex-direction: column ;
-    justify-content: space-between;
-    /* overflow-y: hidden; */
-    /* overflow-y: hidden; */
-}
 
+}
+.logo-spotify {
+    display: flex;
+    flex-direction: column;
+}
  .navbar-column div ul{
      display: flex;
      flex-direction: column;
@@ -227,11 +230,12 @@ font-weight: bold;
 .name-playlist{
     flex-grow: 1;
     flex-shrink:1;
-    overflow:auto;
+    overflow-y:auto;
 }
 
 .icon-install-user {
     height:90px;
+    margin-bottom: 15px;
 }
 
 .icon-install-user span {
