@@ -22,6 +22,7 @@
 
 main .content {
     height: 100%;
+    /* height: calc(100vh - 90px); */
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
@@ -30,6 +31,7 @@ main .content {
 .topnav {
     position: fixed;
     background-color:black;
+    opacity: 0.9;
     height: 70px;
     width: 100%;
     display: flex;
@@ -59,6 +61,7 @@ main .content {
 .podcasts {   
     background-color:rgb(20, 21, 31);
     margin-top: 70px;
+    height: calc(100vh - 90px);
    
 }
 
@@ -75,6 +78,7 @@ main .content {
     flex-direction: column;
     align-items: center;
     width:200px;
+    flex-wrap: wrap;
 }
 .first-row {
     margin-top: 15px;
