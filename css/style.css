@@ -22,7 +22,6 @@
 
 main .content {
     height: 100%;
-    /* height: calc(100vh - 90px); */
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
@@ -30,13 +29,14 @@ main .content {
 
 .topnav {
     position: fixed;
-    background-color:black;
+    background-color: black;
     opacity: 0.9;
     height: 70px;
     width: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+
 }
 
 .button-topnav{
@@ -100,8 +100,6 @@ main .content {
 
 .più-ascolti {
     margin: 45px 0 30px 15px;
-    /* margin-left: 15px;
-    margin-bottom: 30px; */
 }
 
 .più-ascolti p{
@@ -134,7 +132,6 @@ main .content {
 
 .image-text {
 text-align: center;
-/* margin-top: 15px; */
 padding: 15px;
 font-size: 17px;
 font-weight: bold;
@@ -146,10 +143,12 @@ font-weight: bold;
     font-size: 13px;
 }
 
- nav {
+ nav {   
      display: flex;
      justify-content: center;
-     flex-wrap:wrap;
+     text-align: center;
+     margin-left: 250px;
+    
  }
 
  nav li a{
@@ -165,6 +164,7 @@ font-weight: bold;
  }
 
  /* Sidebar */
+
  main .sidebar {
     background-color:black;
     height:calc(100vh - 90px);
@@ -175,20 +175,27 @@ font-weight: bold;
     display: flex;
     flex-direction: column;
 }
+
  .navbar-column div ul{
      display: flex;
      flex-direction: column;
  
  }
+
 .navbar-column {
     min-height:400px;
     display: flex;
     flex-direction: column;
 }
+
  .navbar-column li{
      display: flex;
      flex-direction: row;
      align-items: center; 
+ }
+ 
+ .icon-create-playlist i:hover{
+     color:white;
  }
  
  
@@ -205,6 +212,10 @@ font-weight: bold;
  .icon-install-user {
      padding:0;
      height: 50px;
+ }
+
+ .icon-install-user .install:hover{
+color:white;
  }
 
 .navbar-column ul li  a:hover {
@@ -242,6 +253,7 @@ font-weight: bold;
     color:white;
     font-weight: bolder;
 }
+
           /* Footer */
 
  .web footer {
@@ -263,6 +275,10 @@ footer .controls {
 footer .icons-playlist .icons-voce {
     flex-basis: 230px;
     height:100%;  /* aggiunta 11:56 */
+}
+
+.icons-voce{
+    padding: 15px;
 }
 
 footer .icons {
@@ -323,7 +339,6 @@ ul {
 
 li {
     list-style: none;
-    /* padding:15px; */
     margin-left: 15px;
     margin-top: 12px;
     display: flex;
@@ -339,17 +354,29 @@ li {
     margin-top: 5px;
 }
 
-li .list-row{
+li .list-row {
     display: flex;
     flex-direction: row;
     color: gray;
     justify-content: center;
     align-items: center; 
-}
-
-li .list-row {
     padding-right: 20px;
 }
+
+.list-row a {
+    color: grey;
+    margin-bottom: 15px;
+   
+}
+
+.list-row a:hover {
+    color:white;
+}
+
+ .icons-playlist .text-gray span:hover {
+    color:white;
+}
+
 
 footer i{
     margin-left: 30px;
