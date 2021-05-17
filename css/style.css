@@ -102,6 +102,9 @@ main .content {
     margin: 45px 0 30px 15px;
 }
 
+.creato {
+    margin: 15px 10px;
+}
 .più-ascolti p{
     color:grey;
     margin-top: 15px;
@@ -137,6 +140,9 @@ font-size: 17px;
 font-weight: bold;
 }
 
+.radius{
+    border-radius: 50%;
+}
 .subtitle {
     margin-top: 10px;
     color: grey;
