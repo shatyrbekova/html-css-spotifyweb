@@ -53,7 +53,7 @@ main .content {
 
 .button-topnav:hover {
     opacity: 0.6;
-    border:2px greenyellow solid; 
+
 }
 
 /* Players */
@@ -146,8 +146,8 @@ font-weight: bold;
  nav {   
      display: flex;
      justify-content: center;
-     text-align: center;
-     margin-left: 250px;
+     align-items: center;
+     flex-wrap: wrap;
     
  }
 
@@ -273,12 +273,12 @@ footer .controls {
 }
 
 footer .icons-playlist .icons-voce {
-    flex-basis: 230px;
-    height:100%;  /* aggiunta 11:56 */
+    flex-basis: 200px;
+    height:100%; 
 }
 
 .icons-voce{
-    padding: 15px;
+    padding-top: 15px;
 }
 
 footer .icons {
@@ -296,6 +296,7 @@ footer .controls > div{
     flex-direction: row;
     flex-grow:1;
     width:300px;
+    position: relative;
 }
 
 .voice-icon{
@@ -320,8 +321,28 @@ footer .controls .duration-audio .twenty-percent-audio, .voice-icon .twenty-perc
     background-color: white;
     cursor: pointer;
 }
+.green-point{
+    display: none;
+    width: 10px;
+    height: 10px;
+    text-align:center;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top:0%;
+    left:20%;
+    transform: translate(-50%, -30%);
 
+}
+.duration-audio:hover .green-point{
+    cursor:pointer;
+    display: block;
+}
 
+ .twenty-percent-audio:hover{
+     cursor: pointer;
+    color:green;
+}
 .icons-audio{
     display: flex;
     flex-direction: column;
@@ -361,6 +382,7 @@ li .list-row {
     justify-content: center;
     align-items: center; 
     padding-right: 20px;
+    flex-wrap: wrap;
 }
 
 .list-row a {
